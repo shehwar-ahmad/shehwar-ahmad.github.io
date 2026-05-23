@@ -18,7 +18,7 @@ export function Projects({ projects }: ProjectsProps) {
           {projects.map((project) => (
             <li
               key={project.name}
-              className="border-line bg-background overflow-hidden rounded-xl border shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+              className="border-line bg-background overflow-hidden rounded-xl border shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_-6px_rgba(10,37,64,0.12)]"
             >
               <div className="bg-gradient-brand relative aspect-video w-full">
                 <Image

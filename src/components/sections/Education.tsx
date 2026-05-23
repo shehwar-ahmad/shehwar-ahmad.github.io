@@ -19,13 +19,13 @@ export function Education({ items }: EducationProps) {
               key={edu.school}
               className="border-line bg-background flex items-start gap-4 rounded-xl border p-4"
             >
-              <div className="bg-gradient-brand relative size-10 shrink-0 overflow-hidden rounded-md">
+              <div className="bg-background border-line relative size-10 shrink-0 overflow-hidden rounded-md border">
                 <Image
                   src={edu.logo}
                   alt={`${edu.school} logo`}
                   fill
                   sizes="40px"
-                  className="object-cover"
+                  className="object-contain p-1"
                 />
               </div>
               <div className="flex-1">

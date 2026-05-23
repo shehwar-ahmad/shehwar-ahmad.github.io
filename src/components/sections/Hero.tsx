@@ -20,23 +20,23 @@ export function Hero({ site }: HeroProps) {
     >
       <Container className="py-14 sm:py-20">
         {site.available && (
-          <div className="text-brand mb-4 flex items-center gap-2 text-[11px] font-semibold tracking-widest uppercase">
-            <span className="bg-success inline-block size-1.5 rounded-full" />
+          <div className="text-brand animate-fade-up mb-4 flex items-center gap-2 text-[11px] font-semibold tracking-widest uppercase">
+            <span className="bg-success animate-pulse-soft inline-block size-1.5 rounded-full" />
             Open to opportunities
           </div>
         )}
 
-        <h1 className="max-w-[760px] text-4xl leading-[1.05] font-extrabold tracking-[-0.03em] sm:text-5xl">
+        <h1 className="animate-fade-up max-w-190 text-4xl leading-[1.05] font-extrabold tracking-[-0.03em] [animation-delay:60ms] sm:text-5xl">
           Web developer
           <br />
           building <span className="text-gradient-brand">scalable applications.</span>
         </h1>
 
-        <p className="text-muted-foreground mt-4 max-w-xl text-sm/relaxed sm:text-base">
+        <p className="text-muted-foreground animate-fade-up mt-4 max-w-xl text-sm/relaxed [animation-delay:120ms] sm:text-base">
           {site.bio}
         </p>
 
-        <div className="mt-6 flex flex-wrap items-center gap-3">
+        <div className="animate-fade-up mt-6 flex flex-wrap items-center gap-3 [animation-delay:180ms]">
           <GradientButton variant="gradient" href={`mailto:${site.email}`}>
             Get in touch <ArrowRight size={16} />
           </GradientButton>

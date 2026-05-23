@@ -5,7 +5,7 @@ export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="border-line border-t">
-      <Container className="text-subtle flex flex-col items-center justify-between gap-3 py-5 text-xs sm:flex-row">
+      <Container className="text-subtle flex flex-col items-center justify-between gap-3 pt-6 pb-[max(env(safe-area-inset-bottom),1.5rem)] text-xs sm:flex-row sm:py-5">
         <div>
           © {year} {site.name}
         </div>

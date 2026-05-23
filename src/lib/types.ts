@@ -38,7 +38,7 @@ export interface Certification {
   title: string;
   issuer: string;
   url: string;
-  image: string;
+  image?: string;
 }
 
 export interface Education {

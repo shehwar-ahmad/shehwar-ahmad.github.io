@@ -15,7 +15,10 @@ export function Certifications({ items }: CertificationsProps) {
 
         <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((cert) => (
-            <li key={cert.title} className="border-line bg-background rounded-lg border p-4">
+            <li
+              key={cert.title}
+              className="border-line bg-background rounded-lg border p-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_6px_18px_-6px_rgba(10,37,64,0.12)]"
+            >
               <span className="bg-accent text-accent-foreground inline-block rounded-sm px-2 py-0.5 text-[10px] font-semibold">
                 {cert.issuer}
               </span>
