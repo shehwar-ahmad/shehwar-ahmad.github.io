@@ -1,0 +1,8 @@
+node_modules
+.next
+out
+_legacy-content
+public
+package-lock.json
+docs
+.superpowers

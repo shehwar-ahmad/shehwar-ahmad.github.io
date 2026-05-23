@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* Scope class detection to source files only. Without this, Tailwind v4's
+   auto-discovery scans README.md and docs/, where literal class examples
+   (e.g. `[color:var(...)]`) get parsed as real classes and break the build. */
+@source "../**/*.{ts,tsx}";
+
+@theme {
+  /* Brand (gradient stops) */
+  --color-brand: #635bff;
+  --color-brand-2: #00d4ff;
+  --color-brand-deep: #3f37c9;
+
+  /* Surfaces */
+  --color-background: #ffffff;
+  --color-muted: #f6f9fc;
+
+  /* Text */
+  --color-foreground: #0a2540;
+  --color-muted-foreground: #425466;
+  --color-subtle: #8898aa;
+
+  /* Accent (chip / tag) */
+  --color-accent: #eef0ff;
+  --color-accent-foreground: #3f37c9;
+
+  /* Borders / dividers */
+  --color-line: #e6ebf1;
+
+  /* State */
+  --color-success: #22c55e;
+
+  /* Fonts (variable comes from next/font in layout.tsx) */
+  --font-sans:
+    var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-muted-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-foreground);
+    letter-spacing: -0.02em;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@utility text-gradient-brand {
+  background: linear-gradient(90deg, var(--color-brand), var(--color-brand-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+@utility bg-gradient-brand {
+  background: linear-gradient(135deg, var(--color-brand), var(--color-brand-2));
+}
