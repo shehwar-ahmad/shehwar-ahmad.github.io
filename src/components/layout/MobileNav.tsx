@@ -108,6 +108,8 @@ export function MobileNav({ links, resumeUrl }: MobileNavProps) {
               rel="noreferrer"
               onClick={() => setOpen(false)}
               className="bg-foreground hover:bg-gradient-brand mt-3 inline-flex items-center justify-center gap-1.5 rounded-full px-4 py-2.5 text-sm font-semibold text-white transition-all"
+              data-track="resume_click"
+              data-track-source="mobile_drawer"
             >
               Resume ↗
             </a>
@@ -117,6 +119,8 @@ export function MobileNav({ links, resumeUrl }: MobileNavProps) {
             href={`mailto:${site.email}`}
             onClick={() => setOpen(false)}
             className="bg-gradient-brand mt-3 inline-flex items-center justify-center gap-1.5 rounded-full px-4 py-2.5 text-sm font-semibold text-white shadow-[0_4px_12px_-2px_rgba(99,91,255,0.4)]"
+            data-track="contact_click"
+            data-track-source="mobile_drawer"
           >
             <Mail size={14} /> Get in touch
           </a>
@@ -134,6 +138,9 @@ export function MobileNav({ links, resumeUrl }: MobileNavProps) {
               rel="noreferrer"
               aria-label="GitHub"
               className="hover:text-brand hover:bg-muted rounded-full p-2.5 transition-colors"
+              data-track="outbound_click"
+              data-track-category="social"
+              data-track-platform="github"
             >
               <SiGithub size={16} />
             </a>
@@ -143,6 +150,9 @@ export function MobileNav({ links, resumeUrl }: MobileNavProps) {
               rel="noreferrer"
               aria-label="LinkedIn"
               className="hover:text-brand hover:bg-muted rounded-full p-2.5 transition-colors"
+              data-track="outbound_click"
+              data-track-category="social"
+              data-track-platform="linkedin"
             >
               <FaLinkedinIn size={16} />
             </a>
@@ -152,6 +162,9 @@ export function MobileNav({ links, resumeUrl }: MobileNavProps) {
               rel="noreferrer"
               aria-label="Medium"
               className="hover:text-brand hover:bg-muted rounded-full p-2.5 transition-colors"
+              data-track="outbound_click"
+              data-track-category="social"
+              data-track-platform="medium"
             >
               <SiMedium size={16} />
             </a>
@@ -161,6 +174,9 @@ export function MobileNav({ links, resumeUrl }: MobileNavProps) {
               rel="noreferrer"
               aria-label="Stack Overflow"
               className="hover:text-brand hover:bg-muted rounded-full p-2.5 transition-colors"
+              data-track="outbound_click"
+              data-track-category="social"
+              data-track-platform="stackoverflow"
             >
               <SiStackoverflow size={16} />
             </a>
@@ -177,6 +193,7 @@ export function MobileNav({ links, resumeUrl }: MobileNavProps) {
         onClick={() => setOpen(true)}
         aria-label="Open menu"
         className="hover:bg-muted rounded-full p-2 transition-colors"
+        data-track="mobile_menu_open"
       >
         <Menu size={20} />
       </button>

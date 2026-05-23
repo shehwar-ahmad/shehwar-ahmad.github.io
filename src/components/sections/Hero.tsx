@@ -32,7 +32,12 @@ export function Hero({ site }: HeroProps) {
         </p>
 
         <div className="animate-fade-up mt-6 flex flex-wrap items-center gap-3 [animation-delay:180ms]">
-          <GradientButton variant="gradient" href={`mailto:${site.email}`}>
+          <GradientButton
+            variant="gradient"
+            href={`mailto:${site.email}`}
+            data-track="contact_click"
+            data-track-source="hero_cta"
+          >
             Get in touch <ArrowRight size={16} />
           </GradientButton>
 
@@ -42,6 +47,8 @@ export function Hero({ site }: HeroProps) {
               href={site.resumeUrl}
               target="_blank"
               rel="noreferrer"
+              data-track="resume_click"
+              data-track-source="hero"
             >
               View resume <ExternalLink size={14} />
             </GradientButton>
@@ -54,6 +61,9 @@ export function Hero({ site }: HeroProps) {
               rel="noreferrer"
               aria-label="GitHub"
               className="hover:text-brand"
+              data-track="outbound_click"
+              data-track-category="social"
+              data-track-platform="github"
             >
               <SiGithub size={18} />
             </a>
@@ -63,6 +73,9 @@ export function Hero({ site }: HeroProps) {
               rel="noreferrer"
               aria-label="LinkedIn"
               className="hover:text-brand"
+              data-track="outbound_click"
+              data-track-category="social"
+              data-track-platform="linkedin"
             >
               <FaLinkedinIn size={18} />
             </a>
@@ -72,6 +85,9 @@ export function Hero({ site }: HeroProps) {
               rel="noreferrer"
               aria-label="Medium"
               className="hover:text-brand"
+              data-track="outbound_click"
+              data-track-category="social"
+              data-track-platform="medium"
             >
               <SiMedium size={18} />
             </a>
@@ -81,10 +97,19 @@ export function Hero({ site }: HeroProps) {
               rel="noreferrer"
               aria-label="Stack Overflow"
               className="hover:text-brand"
+              data-track="outbound_click"
+              data-track-category="social"
+              data-track-platform="stackoverflow"
             >
               <SiStackoverflow size={18} />
             </a>
-            <a href={`mailto:${site.email}`} aria-label="Email" className="hover:text-brand">
+            <a
+              href={`mailto:${site.email}`}
+              aria-label="Email"
+              className="hover:text-brand"
+              data-track="contact_click"
+              data-track-source="hero_icon"
+            >
               <Mail size={18} />
             </a>
           </div>

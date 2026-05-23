@@ -1,6 +1,13 @@
 import { Container } from "@/components/ui/Container";
 import { site } from "@/content/site";
 
+const FOOTER_LINKS = [
+  { url: site.socials.github, label: "GitHub", platform: "github" },
+  { url: site.socials.linkedin, label: "LinkedIn", platform: "linkedin" },
+  { url: site.socials.medium, label: "Medium", platform: "medium" },
+  { url: site.socials.stackoverflow, label: "Stack Overflow", platform: "stackoverflow" },
+];
+
 export function Footer() {
   const year = new Date().getFullYear();
   return (
@@ -10,38 +17,21 @@ export function Footer() {
           © {year} {site.name}
         </div>
         <div className="flex gap-4">
-          <a
-            href={site.socials.github}
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-brand"
-          >
-            GitHub
-          </a>
-          <a
-            href={site.socials.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-brand"
-          >
-            LinkedIn
-          </a>
-          <a
-            href={site.socials.medium}
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-brand"
-          >
-            Medium
-          </a>
-          <a
-            href={site.socials.stackoverflow}
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-brand"
-          >
-            Stack Overflow
-          </a>
+          {FOOTER_LINKS.map((link) => (
+            <a
+              key={link.platform}
+              href={link.url}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-brand"
+              data-track="outbound_click"
+              data-track-category="social"
+              data-track-platform={link.platform}
+              data-track-source="footer"
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
       </Container>
     </footer>

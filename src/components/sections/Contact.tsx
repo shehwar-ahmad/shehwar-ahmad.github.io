@@ -20,7 +20,12 @@ export function Contact({ site }: ContactProps) {
           Discuss a project or just want to say hi? My inbox is open.
         </p>
         <div className="mt-5">
-          <GradientButton variant="gradient" href={`mailto:${site.email}`}>
+          <GradientButton
+            variant="gradient"
+            href={`mailto:${site.email}`}
+            data-track="contact_click"
+            data-track-source="contact_section"
+          >
             {site.email}
           </GradientButton>
         </div>

@@ -39,6 +39,9 @@ export function Projects({ projects }: ProjectsProps) {
                   target="_blank"
                   rel="noreferrer"
                   className="text-brand mt-3 inline-flex items-center gap-1 text-xs font-semibold hover:underline sm:text-sm"
+                  data-track="outbound_click"
+                  data-track-category="project"
+                  data-track-name={project.name}
                 >
                   Visit website <ExternalLink size={12} />
                 </a>

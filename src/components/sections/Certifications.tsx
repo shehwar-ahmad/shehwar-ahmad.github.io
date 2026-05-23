@@ -28,6 +28,10 @@ export function Certifications({ items }: CertificationsProps) {
                 target="_blank"
                 rel="noreferrer"
                 className="text-brand mt-2 inline-flex items-center gap-1 text-xs font-semibold hover:underline"
+                data-track="outbound_click"
+                data-track-category="certificate"
+                data-track-name={cert.title}
+                data-track-issuer={cert.issuer}
               >
                 View certificate <ExternalLink size={11} />
               </a>
