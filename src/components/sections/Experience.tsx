@@ -10,7 +10,7 @@ interface ExperienceProps {
 
 export function Experience({ experiences }: ExperienceProps) {
   return (
-    <section id="work" className="bg-background">
+    <section id="work" className="relative">
       <Container className="py-12 sm:py-16">
         <SectionHeader eyebrow="Experience" title="Where I've worked" />
 

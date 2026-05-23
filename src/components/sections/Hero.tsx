@@ -11,13 +11,7 @@ interface HeroProps {
 
 export function Hero({ site }: HeroProps) {
   return (
-    <section
-      className="relative overflow-hidden"
-      style={{
-        background:
-          "radial-gradient(ellipse 80% 60% at 70% 20%, rgba(99,91,255,0.08), transparent), radial-gradient(ellipse 60% 50% at 20% 80%, rgba(0,212,255,0.06), transparent)",
-      }}
-    >
+    <section className="relative">
       <Container className="py-14 sm:py-20">
         {site.available && (
           <div className="text-brand animate-fade-up mb-4 flex items-center gap-2 text-[11px] font-semibold tracking-widest uppercase">
@@ -29,7 +23,8 @@ export function Hero({ site }: HeroProps) {
         <h1 className="animate-fade-up max-w-190 text-4xl leading-[1.05] font-extrabold tracking-[-0.03em] [animation-delay:60ms] sm:text-5xl">
           Web developer
           <br />
-          building <span className="text-gradient-brand">scalable applications.</span>
+          building{" "}
+          <span className="text-gradient-brand animate-gradient-flow">scalable applications.</span>
         </h1>
 
         <p className="text-muted-foreground animate-fade-up mt-4 max-w-xl text-sm/relaxed [animation-delay:120ms] sm:text-base">

@@ -8,14 +8,7 @@ interface ContactProps {
 
 export function Contact({ site }: ContactProps) {
   return (
-    <section
-      id="contact"
-      className="relative"
-      style={{
-        background:
-          "radial-gradient(ellipse 60% 60% at 50% 50%, rgba(99,91,255,0.06), transparent)",
-      }}
-    >
+    <section id="contact" className="relative">
       <Container className="py-16 text-center sm:py-20">
         <div className="text-brand mb-2 text-[11px] font-semibold tracking-[0.15em] uppercase">
           Contact

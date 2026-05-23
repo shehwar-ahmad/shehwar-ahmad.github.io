@@ -9,7 +9,7 @@ interface CertificationsProps {
 
 export function Certifications({ items }: CertificationsProps) {
   return (
-    <section id="certifications" className="bg-background">
+    <section id="certifications" className="relative">
       <Container className="py-12 sm:py-16">
         <SectionHeader eyebrow="Certifications" title="Continuous learning" />
 

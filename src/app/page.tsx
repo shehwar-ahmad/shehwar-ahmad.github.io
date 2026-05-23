@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/layout/Navbar";
+import { NavPill } from "@/components/layout/NavPill";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
@@ -14,11 +15,13 @@ import { experiences } from "@/content/experience";
 import { projects } from "@/content/projects";
 import { certifications } from "@/content/certifications";
 import { education } from "@/content/education";
+import { NAV_LINKS } from "@/lib/nav";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <NavPill links={NAV_LINKS} />
       <main id="top">
         <Hero site={site} />
         <About skills={skills} />

@@ -16,7 +16,7 @@ function iconFor(key: string): IconType | null {
 
 export function About({ skills }: AboutProps) {
   return (
-    <section id="about" className="border-line bg-muted border-y">
+    <section id="about" className="relative">
       <Container className="py-12 sm:py-16">
         <SectionHeader eyebrow="About" title="Transforming coffee into code." />
 

@@ -10,7 +10,7 @@ interface ProjectsProps {
 
 export function Projects({ projects }: ProjectsProps) {
   return (
-    <section id="projects" className="border-line bg-muted border-y">
+    <section id="projects" className="relative">
       <Container className="py-12 sm:py-16">
         <SectionHeader eyebrow="Projects" title="Selected work" />
 

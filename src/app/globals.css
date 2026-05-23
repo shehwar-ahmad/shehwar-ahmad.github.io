@@ -41,11 +41,27 @@
   }
 
   body {
+    /* Continuous gradient backdrop so adjacent sections blend instead of
+       cutting at hard color edges. Two brand-tinted radial spots anchored to
+       the viewport plus a soft vertical wash. Fixed attachment keeps the
+       gradient stable while scrolling — modern iOS Safari handles it fine. */
     background-color: var(--color-background);
+    background-image:
+      radial-gradient(ellipse 120% 50% at 50% 0%, rgba(99, 91, 255, 0.08), transparent 70%),
+      radial-gradient(ellipse 100% 40% at 50% 100%, rgba(0, 212, 255, 0.06), transparent 70%),
+      linear-gradient(180deg, transparent 0%, rgba(246, 249, 252, 0.6) 50%, transparent 100%);
+    background-attachment: fixed;
     color: var(--color-muted-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+  }
+
+  /* Offset anchor jumps so target sections clear the fixed NavPill on desktop
+     and the sticky mobile nav pill. */
+  :target,
+  section[id] {
+    scroll-margin-top: 88px;
   }
 
   h1,
@@ -110,9 +126,26 @@
   animation: fade-up 0.5s ease-out both;
 }
 
+/* Gradient flow — slow shimmer through the brand gradient on hero text. */
+@keyframes gradient-flow {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@utility animate-gradient-flow {
+  background-size: 200% 100%;
+  animation: gradient-flow 6s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-pulse-soft,
-  .animate-fade-up {
+  .animate-fade-up,
+  .animate-gradient-flow {
     animation: none;
   }
 }

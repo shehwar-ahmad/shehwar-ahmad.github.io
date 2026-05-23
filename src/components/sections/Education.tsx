@@ -9,7 +9,7 @@ interface EducationProps {
 
 export function Education({ items }: EducationProps) {
   return (
-    <section id="education" className="border-line bg-muted border-y">
+    <section id="education" className="relative">
       <Container className="py-12 sm:py-16">
         <SectionHeader eyebrow="Education" title="Academic background" />
 
